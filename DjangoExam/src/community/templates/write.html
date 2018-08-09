@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>write</title>
+<link rel="stylesheet"
+	href='{% static "css/bootstrap.min.css" %}'
+	type="text/css" />
+</head>
+<body>
+	<div class="container" align="center">
+		<h1>Django이용 게시판</h1>
+		<h2>write</h2>
+		<form action="" method="POST">
+				{% csrf_token %} <!-- 보안강화 이 소스를 넣어줘야 한다. -->
+			<table class="table">
+				{{form.as_table}} <!-- 파이썬코드 jsp의 <%와 유사 -->
+			</table>
+			<button type="submit" class="btn btn-primary">작성</button>
+		</form>
+	</div>
+</body>
+</html>

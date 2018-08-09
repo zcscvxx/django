@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>view</title>
+<link rel="stylesheet"
+	href='{% static "css/bootstrap.min.css" %}'
+	type="text/css" />
+</head>
+<body>
+	<div class="container" align="center">
+		<h1>Django이용 게시판</h1>
+		<h2>view</h2>
+		<table class="table">
+			<tr><td>제목</td><td>{{article.title}}</td></tr>
+			<tr><td>저자</td><td>{{article.name}}</td></tr>
+			<tr><td>내용</td><td>{{article.contents}}</td></tr>
+			<tr><td>이메일</td><td>{{article.email}}</td></tr>
+		</table>
+	</div>
+</body>
+</html>
